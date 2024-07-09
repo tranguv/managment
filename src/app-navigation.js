@@ -2,20 +2,32 @@ export const navigation = [
   {
     text: 'Home',
     path: '/home',
-    icon: 'home'
+    icon: 'home',
   },
   {
-    text: 'Examples',
+    text: 'Quản lý',
     icon: 'folder',
     items: [
       {
-        text: 'Profile',
-        path: '/profile'
+        text: 'Users',
+        path: '/user',
+        icon: 'user',
       },
       {
-        text: 'Tasks',
-        path: '/tasks'
-      }
-    ]
-  }
-  ];
+        text: 'Products',
+        path: '/product',
+        icon: 'product',
+      },
+      {
+        text: 'Category',
+        path: '/category',
+        icon: 'description',
+      },
+      {
+        text: 'Roles',
+        path: '/role',
+        icon: 'group',
+      },
+    ],
+  },
+];
