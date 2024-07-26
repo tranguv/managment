@@ -4,3 +4,6 @@ export { default as ProductPage } from './products/products';
 export { default as TestPage } from './test/test';
 export { default as RolePage } from './role/role';
 export { default as CategoryPage } from './category/category';
+export { default as OrderPage } from './order/Order';
+export { default as OrderDetailPage } from './order/OrderDetail';
+export { default as OrderDetailCell } from './order/OrderDetailCell';

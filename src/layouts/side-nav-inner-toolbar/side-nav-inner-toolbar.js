@@ -10,9 +10,6 @@ import { useScreenSize } from '../../utils/media-query';
 import { Template } from 'devextreme-react/core/template';
 import { useMenuPatch } from '../../utils/patches';
 
-
-
-
 export default function SideNavInnerToolbar({ title, children }) {
   const scrollViewRef = useRef(null);
   const navigate = useNavigate();
@@ -23,8 +20,8 @@ export default function SideNavInnerToolbar({ title, children }) {
   );
 
   const toggleMenu = useCallback(({ event }) => {
-    setMenuStatus(
-      prevMenuStatus => prevMenuStatus === MenuStatus.Closed
+    setMenuStatus((prevMenuStatus) =>
+      prevMenuStatus === MenuStatus.Closed
         ? MenuStatus.Opened
         : MenuStatus.Closed
     );
@@ -32,36 +29,39 @@ export default function SideNavInnerToolbar({ title, children }) {
   }, []);
 
   const temporaryOpenMenu = useCallback(() => {
-    setMenuStatus(
-      prevMenuStatus => prevMenuStatus === MenuStatus.Closed
+    setMenuStatus((prevMenuStatus) =>
+      prevMenuStatus === MenuStatus.Closed
         ? MenuStatus.TemporaryOpened
         : prevMenuStatus
     );
   }, []);
 
   const onOutsideClick = useCallback(() => {
-    setMenuStatus(
-      prevMenuStatus => prevMenuStatus !== MenuStatus.Closed && !isLarge
+    setMenuStatus((prevMenuStatus) =>
+      prevMenuStatus !== MenuStatus.Closed && !isLarge
         ? MenuStatus.Closed
         : prevMenuStatus
     );
     return menuStatus === MenuStatus.Closed ? true : false;
   }, [isLarge, menuStatus]);
 
-  const onNavigationChanged = useCallback(({ itemData, event, node }) => {
-    if (menuStatus === MenuStatus.Closed || !itemData.path || node.selected) {
-      event.preventDefault();
-      return;
-    }
+  const onNavigationChanged = useCallback(
+    ({ itemData, event, node }) => {
+      if (menuStatus === MenuStatus.Closed || !itemData.path || node.selected) {
+        event.preventDefault();
+        return;
+      }
 
-    navigate(itemData.path);
-    scrollViewRef.current.instance.scrollTo(0);
+      navigate(itemData.path);
+      scrollViewRef.current.instance.scrollTo(0);
 
-    if (!isLarge || menuStatus === MenuStatus.TemporaryOpened) {
-      setMenuStatus(MenuStatus.Closed);
-      event.stopPropagation();
-    }
-  }, [navigate, menuStatus, isLarge]);
+      if (!isLarge || menuStatus === MenuStatus.TemporaryOpened) {
+        setMenuStatus(MenuStatus.Closed);
+        event.stopPropagation();
+      }
+    },
+    [navigate, menuStatus, isLarge]
+  );
 
   return (
     <div className={'side-nav-inner-toolbar'}>
@@ -78,10 +78,7 @@ export default function SideNavInnerToolbar({ title, children }) {
         template={'menu'}
       >
         <div className={'container'}>
-          <Header
-            menuToggleEnabled={isXSmall}
-            toggleMenu={toggleMenu}
-          />
+          <Header menuToggleEnabled={isXSmall} toggleMenu={toggleMenu} />
           <ScrollView ref={scrollViewRef} className={'layout-body with-footer'}>
             <div className={'content'}>
               {React.Children.map(children, (item) => {
@@ -103,16 +100,16 @@ export default function SideNavInnerToolbar({ title, children }) {
             onMenuReady={onMenuReady}
           >
             <Toolbar id={'navigation-header'}>
-              {
-                !isXSmall &&
-                <Item
-                  location={'before'}
-                  cssClass={'menu-button'}
-                >
-                  <Button icon="menu" stylingMode="text" onClick={toggleMenu} />
+              {!isXSmall && (
+                <Item location={'before'} cssClass={'menu-button'}>
+                  <Button icon='menu' stylingMode='text' onClick={toggleMenu} />
                 </Item>
-              }
-              <Item location={'before'} cssClass={'header-title'} text={title} />
+              )}
+              <Item
+                location={'before'}
+                cssClass={'header-title'}
+                text={title}
+              />
             </Toolbar>
           </SideNavigationMenu>
         </Template>
@@ -124,6 +121,5 @@ export default function SideNavInnerToolbar({ title, children }) {
 const MenuStatus = {
   Closed: 1,
   Opened: 2,
-  TemporaryOpened: 3
+  TemporaryOpened: 3,
 };
-

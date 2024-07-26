@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.children-content {
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.Toastify__toast-container--top-right {
+  margin-top: 50px;
+}
+
+.column-header {
+  font-weight: bold;
+  color: black;
+}
+
+/* .dx-datagrid-headers {
+  background-color: #c7f3ff !important;
+} */
+
+
+.dx-treelist .dx-row > td {
+  font-size: 29px;
+}

@@ -6,27 +6,21 @@ import { Footer } from './components';
 
 export default function Content() {
   return (
-    <SideNavBarLayout title={appInfo.title}>
+    <SideNavBarLayout
+    // title={appInfo.title}
+    >
       <Routes>
         {routes.map(({ path, element }) => (
-          <Route
-            key={path}
-            path={path}
-            element={element}
-          />
+          <Route key={path} path={path} element={element} />
         ))}
-        <Route
-          path='*'
-          element={<Navigate to='/home' />}
-        />
+        <Route path='*' element={<Navigate to='/home' />} />
       </Routes>
       <Footer>
         Copyright © 2011-{new Date().getFullYear()} {appInfo.title} Inc.
         <br />
-        All trademarks or registered trademarks are property of their
-        respective owners.
+        All trademarks or registered trademarks are property of their respective
+        owners.
       </Footer>
     </SideNavBarLayout>
   );
 }
-

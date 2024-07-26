@@ -9,3 +9,8 @@ export { default as CustomDateBox } from './date-box/CustomDateBox';
 export { default as CustomCheckBox } from './checkbox/CustomCheckBox';
 export { default as CustomFileUploader } from './single-file-uploader/CustomFileUploader';
 export { default as CustomTabBar } from './tab-bar/CustomTabBar';
+export { default as SearchPanel } from './search-panel/SearchPanel';
+export { default as Spinner } from './loader/Spinner';
+export { default as AlertModal } from './alert-modal/AlertModal';
+export { default as BoxModal } from './single-rectanlge-card/BoxModal';
+export { default as ToastPopup } from './toast-popup/ToastPopup';

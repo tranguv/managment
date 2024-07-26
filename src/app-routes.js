@@ -5,6 +5,8 @@ import {
   RolePage,
   ProductPage,
   CategoryPage,
+  OrderPage,
+  OrderDetailPage,
 } from './pages';
 import { withNavigationWatcher } from './contexts/navigation';
 
@@ -32,6 +34,14 @@ const routes = [
   {
     path: '/role',
     element: RolePage,
+  },
+  {
+    path: '/order',
+    element: OrderPage,
+  },
+  {
+    path: '/order/:id',
+    element: OrderDetailPage,
   },
 ];
 

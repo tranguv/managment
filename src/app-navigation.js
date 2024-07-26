@@ -28,6 +28,16 @@ export const navigation = [
         path: '/role',
         icon: 'group',
       },
+      {
+        text: 'Orders',
+        path: '/order',
+        icon: 'cart',
+      },
+      // {
+      //   text: 'Order Details',
+      //   path: '/order/:id',
+      //   icon: 'product',
+      // }
     ],
   },
 ];

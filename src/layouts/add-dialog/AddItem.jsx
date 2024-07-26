@@ -43,7 +43,11 @@ const AddItem = ({ type }) => {
 
     return (
         <Container>
-            <Row xs={3} sm={3} md={3}>
+            <Row
+                md="3"
+                sm="2"
+                xs="1"
+            >
                 <Col style={styles.colStyle}>
                     <CustomTextBox label={text} />
                     <CustomCheckBox label={"Trang thai"} value={isTrangThaiChecked} onValueChanged={handleTrangThaiChange} />

@@ -5,7 +5,6 @@ export const users = [
     name: 'John Doe',
     username: 'johndoe',
     dob: '1990-01-01',
-    role: 'Admin',
   },
   {
     id: 2,
@@ -13,7 +12,6 @@ export const users = [
     name: 'Jane Smith',
     username: 'janesmith',
     dob: '1985-05-15',
-    role: 'User',
   },
   {
     id: 3,
@@ -21,7 +19,6 @@ export const users = [
     name: 'Alice Johnson',
     username: 'alicej',
     dob: '1992-09-10',
-    role: 'Editor',
   },
   {
     id: 4,
@@ -29,7 +26,6 @@ export const users = [
     name: 'Bob Brown',
     username: 'bobb',
     dob: '1988-12-22',
-    role: 'User',
   },
   {
     id: 5,
@@ -37,7 +33,6 @@ export const users = [
     name: 'Charlie Davis',
     username: 'charlied',
     dob: '1995-03-03',
-    role: 'Admin',
   },
   {
     id: 6,
@@ -45,7 +40,6 @@ export const users = [
     name: 'Daisy Evans',
     username: 'daisye',
     dob: '1991-07-19',
-    role: 'Editor',
   },
   {
     id: 7,
@@ -53,7 +47,6 @@ export const users = [
     name: 'Evan Foster',
     username: 'evanf',
     dob: '1983-11-11',
-    role: 'User',
   },
   {
     id: 8,
@@ -61,7 +54,6 @@ export const users = [
     name: 'Fiona Green',
     username: 'fionag',
     dob: '1990-08-08',
-    role: 'Admin',
   },
   {
     id: 9,
@@ -69,7 +61,6 @@ export const users = [
     name: 'George Harris',
     username: 'georgeh',
     dob: '1987-02-02',
-    role: 'User',
   },
   {
     id: 10,
@@ -77,10 +68,8 @@ export const users = [
     name: 'Hannah White',
     username: 'hannahw',
     dob: '1993-04-14',
-    role: 'Editor',
   },
 ];
-
 
 export const products = [
   {

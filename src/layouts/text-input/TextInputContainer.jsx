@@ -9,6 +9,8 @@ const TextInputContainer = ({ textLabel, placeholder }) => {
                     backgroundColor: '#f2d1a0',
                     borderBottomWidth: 2,
                     borderBottomColor: 'black',
+                    paddingLeft: 20,
+                    paddingRight: 20,
                     width: '40%',
                     display: 'flex',
                     justifyContent: 'center',

@@ -1,5 +1,5 @@
 const appInfo = {
-    title: 'DevExtreme App'
+    title: 'Trang Trang'
 };
 export default appInfo;
 
